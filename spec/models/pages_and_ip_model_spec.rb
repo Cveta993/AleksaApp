@@ -14,6 +14,7 @@ RSpec.describe PagesAndIp, type: :model do
         post = PagesAndIp.new(
             page: ('/home'),
             ip: ('1.1')
+            #ip:('266.266.266.266')
         )
         expect(post).to_not be_valid
     end
@@ -21,7 +22,7 @@ RSpec.describe PagesAndIp, type: :model do
     it 'invalid result due to page' do
         post = PagesAndIp.new(
             page: ('L'),
-            ip: ('192.169')
+            ip: ('192.169.0.1')
         )
         expect(post).to_not be_valid
     end
@@ -30,6 +31,7 @@ RSpec.describe PagesAndIp, type: :model do
         post = PagesAndIp.new(
             page: ('L'),
             ip: ('1.1')
+            #ip:('266.266.266.266')
         )
         expect(post).to_not be_valid
     end
