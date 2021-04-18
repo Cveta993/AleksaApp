@@ -8,10 +8,11 @@
 
 
 
-#Make sure your app folder is on Desktop
+#Make sure your App folder is on Desktops
 
 unless PagesAndIp.any?
-    lines = File.readlines(File.expand_path('~/Desktop/CapaProjekti/aleksa.log'))
+    lines = File.readlines(File.expand_path('~/Desktop/CapaProjekti/AleksaApp/public/aleksa.log')) 
+    #you just need to remove /CapaProjekti from line above to make sure seed is working as intended
     lines.each_with_index do |line, idx|
         path    = line.scan(/[^\s]+/).first
         address    = line.scan(/\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b/).first

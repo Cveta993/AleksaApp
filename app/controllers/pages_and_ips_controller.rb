@@ -1,4 +1,5 @@
 class PagesAndIpsController < ActionController::Base
+    
     def index
         @pages = PagesAndIp.all
 

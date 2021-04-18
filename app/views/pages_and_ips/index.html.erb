@@ -6,19 +6,23 @@
 
 <p> Total number of pages visited <%= @total_pages_visited  %> </p>
 <p>  Number of unique pages <%= @unique_pages %></p> 
-<p>  Number of unique visitors<%= @unique_users %></p>  
+<p>  Number of unique visitors <%= @unique_users %></p>  
 <h3> Total page visitors </h3>
+
 <% @total_visitor_page_views[0...5].each do |page| %>
     <p> <%= page.first%> has been seen <%= page.second%> times </p> 
 <%end%>
+
 <h3> Unique visitors by page </h3>
 <% @unique_visitor_page_views[0...5].each do |page| %>
     <p> <%= page.first%> has been seen by <%= page.second%> unique visitors </p>
 <%end%>
+
 <h3> Unique pages viewed by visitor </h3>
 <% @unique_pages_viewed_by_visitors[0...5].each do |page| %>
     <p> <%= page.first%> has seen <%= page.second%> unique pages </p>
 <%end%> 
+
 <h3> Total pages viewed by visitor </h3>
 <% @total_pages_viewed_by_visitors[0...5].each do |page| %>
     <p> Visitor <%= page.first%> has seen <%= page.second%> total pages </p>
