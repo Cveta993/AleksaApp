@@ -41,4 +41,20 @@ RSpec.describe PagesAndIp, type: :model do
         )
         expect(log_entry).to_not be_valid
     end
+    it 'invalid result due to  ip' do
+        log_entry = PagesAndIp.new(
+            page: ('/home'),
+            ip: nil
+            #ip:('266.266.266.266')
+        )
+        expect(log_entry).to_not be_valid
+    end
+    it 'invalid result due to page ' do
+        log_entry = PagesAndIp.new(
+            page: nil,
+            ip: ('1.1')
+            #ip:('266.266.266.266')
+        )
+        expect(log_entry).to_not be_valid
+    end
 end
